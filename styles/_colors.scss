@@ -1,0 +1,29 @@
+$color-primary: "50,194,77";
+$color-primary-dark: "43,165,66";
+$color-accent: "255,77,77";
+$color-error: "213,0,0";
+$color-success: "50,194,77";
+
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+$colors: (
+  white: white,
+   header: #32c24d,
+   footer: #3c3c3c,
+
+   upload: #32c24d,
+
+   primary: unquote("rgb(#{$color-primary})"),
+   primary-dark: unquote("rgb(#{$color-primary-dark})"),
+   accent: unquote("rgb(#{$color-accent})"),
+   error: unquote("rgb(#{$color-error})"),
+   success: unquote("rgb(#{$color-success})")
+);

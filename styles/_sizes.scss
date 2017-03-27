@@ -1,0 +1,38 @@
+@function size($key) {
+  @if map-has-key($sizes, $key) {
+    @return map-get($sizes, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $sizes.";
+  @return null;
+}
+
+$sizes: (
+  header: 48px
+);
+
+@function margin($key) {
+  @if map-has-key($margins, $key) {
+    @return map-get($margins, $key);
+  }
+  @warn "Unknown `#{$key}` in $margins.";
+  @return null;
+}
+
+$margins: (
+  button: 1rem,
+
+  uploadTable: 3rem
+);
+
+@function padding($key) {
+  @if map-has-key($paddings, $key) {
+    @return map-get($paddings, $key);
+  }
+  @warn "Unknown `#{$key}` in $paddings.";
+  @return null;
+}
+
+$paddings: (
+  button: 1rem
+);
