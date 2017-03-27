@@ -1,0 +1,7 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "standard.enable": true,
+    "eslint.enable": true,
+    "standard.autoFixOnSave": true,
+    "eslint.autoFixOnSave": false
+}
